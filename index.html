@@ -100,7 +100,7 @@
 
     <div class="formelement">
         <label for="phone">Phone Number</label>
-        <input type="text" id="phone" maxlength="10">
+        <input type="text" id="phone" maxlength="10" oninput="this.value = this.value.replace(/[^0-9"]/g, ''>)"required>
     </div>
 
     <div class="formelement">
