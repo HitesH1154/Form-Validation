@@ -161,9 +161,9 @@
             errors += "<p>Phone number must be exactly 10 digits.</p>";
         }
 
-        var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/;
+       var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
         if (!passwordRegex.test(password)) {
-            errors += "<p>Password must include uppercase, lowercase, number & be at least 6 characters long.</p>";
+            errors += "<p>Password must include uppercase, lowercase, number, special character & be at least 6 characters long.</p>";
         }
 
         if (password !== confirmPassword) {
